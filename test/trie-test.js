@@ -70,8 +70,11 @@ describe('TRIE', () => {
     prefixTrie.insert('exactly');
 
     expect(prefixTrie.count()).to.equal(9);
+  })
 
-
+  it('should populate the whole dictionary when populate is called', () => {
+    prefixTrie.populate();
+    console.log(prefixTrie.count());
   })
 
 });
