@@ -1,24 +1,19 @@
 import { expect } from 'chai';
-// const { assert } = require('chai');
-
 import Node from '../lib/Node';
 
 describe('NODE', () => {
   let node;
 
   beforeEach( () => {
-    node = new Node('pizza');
-  })
+    node = new Node('p');
+  });
 
-  it('should exist right now', () => {
+  it('should exist', () => {
     expect(node).to.exist;
-  })
+  });
 
-  it('should default children to null', () => {
-    expect(node.children).to.equal(null);
-  })
+  it('should default end to false', () => {
+    expect(node.end).to.equal(false);
+  });
 
-  it('should take a word as an argument and assign the first letter to the letter property of this obj', () => {
-    expect(node.letter).to.equal('p');
-  })
 })
