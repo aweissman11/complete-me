@@ -74,7 +74,7 @@ describe('TRIE', () => {
 
   it('should populate the whole dictionary when populate is called', () => {
     prefixTrie.populate();
-    console.log(prefixTrie.count());
+    expect(prefixTrie.count()).to.equal(235886);
   })
 
 });
