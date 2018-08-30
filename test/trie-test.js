@@ -18,7 +18,7 @@ describe('TRIE', () => {
   });
 
   it('should display all the words that have been entered', () => {
-    prefixTrie.insert('shiggitybop')
+    prefixTrie.insert('shiggitybop');
     prefixTrie.insert('hello');
     prefixTrie.insert('helicopter');
     prefixTrie.insert('graham');
@@ -42,7 +42,7 @@ describe('TRIE', () => {
   }); 
 
   it('should suggest words', () => {
-    prefixTrie.insert('shiggitybop')
+    prefixTrie.insert('shiggitybop');
     prefixTrie.insert('hello');
     prefixTrie.insert('helicopter');
     prefixTrie.insert('graham');
@@ -53,14 +53,15 @@ describe('TRIE', () => {
     expect(prefixTrie.suggest('gr')).to.deep.equal(['graham', 'grain', 'greg']);
     expect(prefixTrie.suggest('x')).to.deep.equal("no words");
     expect(prefixTrie.suggest()).to.deep.equal("no words");
-
-
   });
 
-  it('should count words', () => {
+  it('should count the inserted words but ignore duplicates', () => {
     prefixTrie.insert('dude');
     prefixTrie.insert('dude');
-    prefixTrie.insert('shiggitybop')
+    prefixTrie.insert('shiggitybop');
+
+    expect(prefixTrie.count()).to.equal(2);
+    
     prefixTrie.insert('hello');
     prefixTrie.insert('helicopter');
     prefixTrie.insert('graham');
@@ -79,8 +80,8 @@ describe('TRIE', () => {
 
   it('should suggest words from the entire dictionary', () => {
     prefixTrie.populate();
-    // console.log(JSON.stringify(prefixTrie.suggest('hel'), null, 2));
     
+    // console.log(JSON.stringify(prefixTrie.suggest('hel'), null, 2));
     expect(prefixTrie.suggest('hel')).to.deep.equal(
       [
         "helbeh",
@@ -315,8 +316,5 @@ describe('TRIE', () => {
         "helver",
         "helvite"
       ]);
-
-
   });
-
 });
