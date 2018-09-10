@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "@aweissman/trie-autosuggest",
   "version": "0.0.1",
   "description": "Amazing testing boilerplate",
   "main": "index.js",
@@ -28,5 +28,13 @@
     "style-loader": "^0.22.1",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aweissman11/complete-me.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aweissman11/complete-me/issues"
+  },
+  "homepage": "https://github.com/aweissman11/complete-me#readme"
 }

@@ -12,4 +12,8 @@ describe('NODE', () => {
     expect(node).to.exist;
   });
 
+  //Also include default properties
+  //And that it is an instance of a Node
+  //And that 
+
 })

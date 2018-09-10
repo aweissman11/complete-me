@@ -317,4 +317,23 @@ describe('TRIE', () => {
         "helvite"
       ]);
   });
+
+  // it('should sort suggestions based on clicks per choice', () => {
+  //   prefixTrie.insert('hello');
+  //   prefixTrie.insert('helicopter');
+  //   prefixTrie.insert('helium');
+  //   prefixTrie.insert('hellscape');
+  //   prefixTrie.insert('healthy');
+  //   prefixTrie.insert('graham');
+  //   prefixTrie.insert('greg');
+  //   prefixTrie.insert('grain');
+  //   prefixTrie.insert('dudette');
+  //   prefixTrie.insert('exactly');
+
+  //   // console.log(prefixTrie.displayWords());
+  //   prefixTrie.sortSuggest('hel');
+  // });
+  
+
+
 });
